@@ -1,0 +1,26 @@
+.contact_section {
+  padding-top: 100px;
+  flex-direction: row;
+}
+
+.contact_section .form {
+  width: 100%;
+  padding: 0px 100px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact_section .form .button {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+}
+
+.contact_section .form .form_textfields {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}

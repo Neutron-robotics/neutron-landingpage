@@ -1,0 +1,236 @@
+.home_section {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(129, 137, 242, 0.6) 47%,
+    rgba(100, 109, 215, 0.6) 79%,
+    rgba(97, 51, 184, 0.6) 100%
+  );
+}
+
+.home_section .home_button {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  width: 200px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 20px 0px 23px;
+  height: 50px;
+  color: white;
+}
+
+.home_section .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center !important;
+}
+
+.home_section .container .name {
+  pointer-events: all;
+  font-family: calibre_semi_bold;
+  font-size: clamp(40px, 8vw, 70px);
+  color: var(--black_text);
+  margin-top: 25px;
+}
+
+.home_section .container .text_content {
+  width: 50%;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.shape_bg {
+  width: 100%;
+}
+
+.home_shapes_container {
+  width: 600px;
+  height: 653px;
+  position: relative;
+}
+
+.home_section .container .home_centered_img {
+  left: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home_section .container .home_logo img {
+  height: 500px;
+  z-index: 1;
+}
+
+.home_section .container .home_bg_shape {
+  width: 100%;
+}
+
+.home_section .container .home_shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.home_section .container .home_shape img {
+  height: 150px;
+  width: 150px;
+  color: transparent;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 21px;
+}
+
+.home_section .container .speed_shape img {
+  animation: moveImage 8s linear infinite;
+}
+
+.home_section .container .handshake_shape img {
+  animation: moveImage2 8s linear infinite;
+}
+
+.home_section .container .analytics_shape img {
+  animation: moveImage 8s linear infinite;
+}
+
+.home_section .container .node_shape img {
+  animation: moveImage2 8s linear infinite;
+}
+
+.home_section .container .speed_shape {
+  top: 0;
+  right: -60px;
+}
+
+.home_section .container .handshake_shape {
+  bottom: 0px;
+  left: -40px;
+}
+
+.home_section .container .analytics_shape {
+  bottom: 0;
+  right: -45px;
+}
+
+.home_section .container .node_shape {
+  top: 0px;
+  left: -60px;
+}
+
+@media screen and (max-width: 1279px) {
+  .home_section .container .home_logo img {
+    height: 400px;
+  }
+
+  .home_section .container .home_shape img {
+    height: 120px;
+  }
+
+  .home_shapes_container {
+    width: 540px;
+    height: 588px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .home_section .container .home_logo img {
+    height: 400px;
+    width: 400px;
+  }
+
+  .home_section .container .home_shape img {
+    height: 80px;
+  }
+
+  .home_section .container {
+    margin-top: 120px;
+  }
+
+  .home_shapes_container {
+    width: 351px;
+    height: 382px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home_section .container {
+    flex-direction: column;
+  }
+
+  .home_section .home_button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home_section .container .home_logo img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .home_section .container .text_content {
+    width: auto;
+  }
+
+  .home_section .container .home_shape img {
+    height: 60px;
+  }
+
+  .home_shapes_container {
+    width: 270px;
+    height: 294px;
+  }
+
+  .home_section .container .analytics_shape {
+    bottom: 0;
+    right: -40px;
+  }
+
+  .home_section .container .handshake_shape {
+    bottom: 0px;
+    left: -40px;
+  }
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translate(0, 0); /* Initial position */
+  }
+  50% {
+    transform: translate(10px, 10px); /* Move right and down */
+  }
+  100% {
+    transform: translate(0, 0); /* Return to initial position */
+  }
+}
+
+@keyframes moveImage2 {
+  0% {
+    transform: translate(0, 0); /* Initial position */
+  }
+  50% {
+    transform: translate(-14px, 5px); /* Move right and down */
+  }
+  100% {
+    transform: translate(0, 0); /* Return to initial position */
+  }
+}

@@ -1,0 +1,100 @@
+.mission_section {
+  background-color: var(--white);
+  padding-top: 100px;
+}
+
+.about_end {
+  background-color: var(--white);
+}
+
+.mission_section .iceberg_container {
+  display: flex;
+  position: relative;
+}
+
+.mission_section .iceberg_labels {
+  display: flex;
+  flex-direction: column;
+  min-width: 170px;
+  gap: 200px;
+  justify-content: center;
+}
+
+.mission_section .iceberg_labels span {
+  font-size: 20px;
+  color: #878787;
+  font-weight: bold;
+}
+
+.mission_section .iceberg_labels li {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.mission_section .iceberg_labels span {
+  font-size: 20px;
+  color: #878787;
+  font-weight: bold;
+}
+
+.mission_section .content {
+  margin-top: clamp(80px, 7vw, 95px);
+  margin-bottom: calc(clamp(100px, 7vw, 120px) - 3.3vw);
+  align-items: baseline;
+  padding: 0 100px;
+}
+
+.mission_section .home_bg_shape {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+  top: 0;
+  animation: moveImage 8s linear infinite;
+}
+
+.mission_section .home_iceberg_img {
+  z-index: 10;
+  height: 800px;
+  width: 400px;
+}
+
+@media screen and (max-width: 1279px) {
+  .mission_section .home_iceberg_img {
+    height: 640px;
+    width: 320px;
+  }
+
+  .mission_section .content {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .mission_section {
+    flex-direction: column-reverse;
+  }
+
+  .mission_section .content {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mission_section .home_iceberg_img {
+    height: 480px;
+    width: 240px;
+  }
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translate(0, 0); /* Initial position */
+  }
+  50% {
+    transform: translate(10px, 10px); /* Move right and down */
+  }
+  100% {
+    transform: translate(0, 0); /* Return to initial position */
+  }
+}

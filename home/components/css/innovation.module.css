@@ -1,0 +1,60 @@
+.innovation_section {
+  padding-top: 100px;
+}
+
+.innovation_section .content {
+  padding: 0px 100px;
+}
+
+.carousel_container {
+  box-shadow: 1px 1px 60px #00000014;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.carousel_container > div {
+  width: 600px;
+}
+
+.carousel_container .carousel_img {
+  border-radius: 10px;
+  width: 400px
+}
+
+.innovation_section .content {
+  margin-top: clamp(80px, 7vw, 95px);
+  margin-bottom: calc(clamp(100px, 7vw, 120px) - 3.3vw);
+  align-items: baseline;
+  padding: 0 100px;
+}
+
+@media screen and (max-width: 1279px) {
+  .carousel_container > div {
+    width: 400px;
+  }
+
+  .carousel_container .carousel_img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .innovation_section .content {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .innovation_section {
+    flex-direction: column;
+  }
+
+  .innovation_section .content {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+}

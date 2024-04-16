@@ -1,0 +1,28 @@
+.mission_section {
+  background-color: var(--white);
+  padding-top: 100px;
+  flex-direction: column;
+}
+
+.yt_container {
+  z-index: 10;
+}
+
+.yt_container > div > iframe {
+  width: 640px;
+  height: 390px;
+}
+
+@media screen and (max-width: 999px) {
+  .yt_container > div > iframe {
+    width: 512px;
+    height: 312px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .yt_container > div > iframe {
+    width: 320px;
+    height: 195px;
+  }
+}
