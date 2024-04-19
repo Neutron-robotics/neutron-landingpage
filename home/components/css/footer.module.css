@@ -47,14 +47,26 @@
 }
 
 .footer_section .footer_brand span {
-    color: white;
+  color: white;
 }
 
 .footer_section .separation {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 10px auto 10px auto;
+  height: 1px;
+  background: white;
+}
+
+@media screen and (max-width: 500px) {
+  .footer_section .form {
+    flex-direction: column;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 10px auto 10px auto;
-    height: 1px;
-    background: white;
+  }
+
+  .footer_section .footer_brand {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

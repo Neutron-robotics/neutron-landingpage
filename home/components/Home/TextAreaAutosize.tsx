@@ -62,5 +62,5 @@ export default function CustomTextarea(props: CustomTextareaProps) {
   `,
     );
 
-    return <Textarea {...props} aria-label="textarea" />;
+    return <Textarea minRows={props.minRows} placeholder={props.placeholder} aria-label="textarea" />;
 }

@@ -14,13 +14,38 @@
 }
 
 .contact_section .form .button {
-    width: 200px;
-    height: 25px;
-    text-align: center;
+  width: 200px;
+  height: 25px;
+  text-align: center;
 }
 
 .contact_section .form .form_textfields {
   display: flex;
   gap: 10px;
   width: 100%;
+}
+
+@media screen and (max-width: 999px) {
+  .contact_section {
+    flex-direction: column-reverse;
+  }
+
+  .contact_section .form {
+    width: 80%;
+    padding: unset;
+  }
+
+  .contact_title {
+    margin-bottom: 30px;
+  }
+
+  .contact_content {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact_section .form .form_textfields {
+    flex-direction: column;
+  }
 }
