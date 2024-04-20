@@ -47,7 +47,8 @@ const Header = (props: HeaderProps) => {
   }
 
   function scroll_event() {
-    setHeaderDetached(homeRef.current.getBoundingClientRect().top > -200)
+    console.log("Current: ", homeRef.current.getBoundingClientRect().top)
+    setHeaderDetached(homeRef.current.getBoundingClientRect().top > -50)
   }
 
   const handleMenuIconClick = (active: boolean) => {
@@ -67,6 +68,8 @@ const Header = (props: HeaderProps) => {
     }
   }, [])
 
+  console.log("attached ?", headerDetached)
+
   return (
     <>
       <div className={`${styles.header_div} ${headerDetached ? styles.detached : styles.attached}`} style={headerStyle}>
@@ -80,7 +83,7 @@ const Header = (props: HeaderProps) => {
             <div className={styles.menu} style={{ display: displayHeaderMenu ? 'block' : 'none' }}>
               <ol>
                 <li ref={el => (itemRefs as any).current[1] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#home">Home</a></li>
-                <li ref={el => (itemRefs as any).current[2] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#service">Service</a></li>
+                <li ref={el => (itemRefs as any).current[2] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#innovation">Service</a></li>
                 <li ref={el => (itemRefs as any).current[3] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#documentation">Documentation</a></li>
                 <li ref={el => (itemRefs as any).current[4] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#blog">Blog</a></li>
                 <li ref={el => (itemRefs as any).current[5] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#contact">Contact Us</a></li>

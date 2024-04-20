@@ -16,7 +16,7 @@ const InnovationPage = () => {
                 <div className={`content ${styles.content}`}>
                     <span className={`section_subtitle ${styles.mission_subtitle}`}>Services</span>
                     <span className={`${styles.section_title} section_title`}>A Platform For Encouraging Innovation</span>
-                    <div>
+                    <div className='body_paragraph'>
                         <p>
                             In the ever-evolving world of robotics and Industry 4.0, it can be challenging to keep up with the latest
                             technologies and best practices. Our platform simplifies the development, real-time control, and service supervision

@@ -67,7 +67,7 @@
 
 .detached {
   height: 100px;
-  box-shadow: none;
+  box-shadow: none !important;
   pointer-events: none;
   background-color: rgba(16, 29, 48, 0);
   backdrop-filter: none;

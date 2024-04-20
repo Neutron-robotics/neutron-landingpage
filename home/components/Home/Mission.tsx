@@ -46,9 +46,9 @@ const Mission = () => {
                     </div>
                 </div>
                 <div className={`content ${styles.content}`}>
-                    <span className={`section_subtitle ${styles.mission_subtitle}`}>Our mission</span>
+                    <span className={`section_subtitle`}>Our mission</span>
                     <span className={`${styles.section_title} section_title`}>We help you focus on the essential</span>
-                    <div>
+                    <div className='body_paragraph'>
                         <p className={`${styles.p_1}`}>
                             In the fast-paced world of robotics and Industry 4.0, your focus should be on innovation, growth, and delivering exceptional value to your customers. That's where we come in. Our platform is designed to streamline your operations and empower you to concentrate on what truly matters: bringing your vision to life.
                             When you partner with us, you gain access to a comprehensive suite of tools and services that cover every aspect of your robotics journey. From initial planning and hardware design to addressing business-specific challenges, we've got you covered. Our platform acts as a solid foundation, allowing you to build upon it with confidence, knowing that the intricate details are taken care of.

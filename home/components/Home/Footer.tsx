@@ -4,8 +4,16 @@ import NeutronLogo from "../../public/neutron-logo.png"
 import DiscordLogo from "../../public/discord-icon.svg"
 import XLogo from "../../public/x-icon.svg"
 import Image from "next/image";
+import { useState } from 'react'
 
 const Footer = () => {
+    const [email, setEmail] = useState('')
+
+
+    function handleSubscribeClick(): void {
+        window.location.href = window.location.pathname + '#home';
+        window.location.reload();
+    }
 
     return (
         <>
@@ -19,10 +27,11 @@ const Footer = () => {
                             borderRadius: '10px'
                         }}
                             fullWidth
+                            onChange={e => setEmail(e.target.value)}
                             id="outlined-basic"
                             placeholder='Enter your email'
                         />
-                        <a className={`${styles.button} button`} href="#access">
+                        <a onClick={handleSubscribeClick} className={`${styles.button} button`} >
                             <p>Subscribe Now</p>
                         </a>
                     </div>
@@ -30,7 +39,7 @@ const Footer = () => {
                         <Image src={NeutronLogo} alt="logo" width={205} height={35} />
                         <div>
                             <a className={styles.not_button} href="#home">Home</a>
-                            <a className={styles.not_button} href="#service">Service</a>
+                            <a className={styles.not_button} href="#innovation">Service</a>
                             <a className={styles.not_button} href="#documentation">Documentation</a>
                             <a className={styles.not_button} href="#blog">Blog</a>
                         </div>

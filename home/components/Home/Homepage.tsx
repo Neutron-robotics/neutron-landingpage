@@ -64,7 +64,7 @@ const Homepage = forwardRef((props: HomeProps, ref: any) => {
 
     return (
         <>
-            <a id="Home"></a>
+            <a id="home"></a>
             <section className={`section ${styles.home_section}`} ref={homeRef}>
                 {initParticles && (
                     <Particles id="particles" options={ParticleConfig as any} />
@@ -72,11 +72,11 @@ const Homepage = forwardRef((props: HomeProps, ref: any) => {
                 <div className={`${styles.container}`}>
                     <div className={`${styles.text_content}`} ref={targetRef}>
                         <span className={`${styles.name} in_animation`}>The platform empowering Robotics</span>
-                        <p className={`in_animation`}>
+                        <p className={`in_animation ${styles.intro}`}>
                             Integrate your robotic solution into a platform that will bring it to the next level
                         </p>
                         <div className={`in_animation`}>
-                            <a className={`button ${styles.home_button}`} href="#about">
+                            <a className={`button ${styles.home_button}`} href="#mission">
                                 <p>Get Started</p>
                                 <svg className={`button_arrow`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.69 17.39"><g>
                                     <path className={`path_1`} d="M8.9 12.4 L8.9 12.4" />

@@ -30,6 +30,14 @@ ol {
   flex-direction: column;
 }
 
+.error {
+  color: #be0606
+}
+
+.success {
+  color: #079400
+}
+
 .section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,10 +159,17 @@ ol {
   position: relative;
   text-transform: uppercase;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: var(--fade_light_blue);
+  /* background-color: var(--fade_light_blue); */
+  box-shadow: 0 0 20px #6133b8;
+}
+
+.button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .button .button_arrow {
@@ -209,4 +224,8 @@ ol {
   font-size: 23px;
   color: #878787;
   font-weight: bold;
+}
+
+.body_paragraph p {
+  font-family: Roboto;
 }

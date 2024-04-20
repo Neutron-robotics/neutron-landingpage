@@ -8,8 +8,8 @@
     135deg,
     #ffffff 0%,
     rgba(129, 137, 242, 0.6) 47%,
-    rgba(100, 109, 215, 0.6) 79%,
-    rgba(97, 51, 184, 0.6) 100%
+    #646dd799 79%,
+    #6132b899 100%
   );
 }
 
@@ -42,7 +42,8 @@
 
 .home_section .container .name {
   pointer-events: all;
-  font-family: calibre_semi_bold;
+  font-family: Jost;
+  font-weight: bold;
   font-size: clamp(40px, 8vw, 70px);
   color: var(--black_text);
   margin-top: 25px;
@@ -52,6 +53,12 @@
   width: 50%;
   flex: 0 0 auto;
   position: relative;
+}
+
+.home_section .container .text_content .intro {
+  font-family: "Jost";
+  color: #878787;
+  font-weight: bold;
 }
 
 .shape_bg {

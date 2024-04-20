@@ -24,11 +24,13 @@
   font-size: 20px;
   color: #878787;
   font-weight: bold;
+  font-family: Jost;
 }
 
 .mission_section .iceberg_labels li {
   font-weight: bold;
   margin-top: 10px;
+  font-family: Roboto;
 }
 
 .mission_section .iceberg_labels span {
