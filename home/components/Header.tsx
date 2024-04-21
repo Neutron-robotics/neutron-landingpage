@@ -47,7 +47,6 @@ const Header = (props: HeaderProps) => {
   }
 
   function scroll_event() {
-    console.log("Current: ", homeRef.current.getBoundingClientRect().top)
     setHeaderDetached(homeRef.current.getBoundingClientRect().top > -50)
   }
 
@@ -67,8 +66,6 @@ const Header = (props: HeaderProps) => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
-
-  console.log("attached ?", headerDetached)
 
   return (
     <>

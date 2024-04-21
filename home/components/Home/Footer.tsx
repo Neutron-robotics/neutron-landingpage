@@ -5,14 +5,21 @@ import DiscordLogo from "../../public/discord-icon.svg"
 import XLogo from "../../public/x-icon.svg"
 import Image from "next/image";
 import { useState } from 'react'
+import { subscribeNewsletter } from '@/api/website'
 
 const Footer = () => {
     const [email, setEmail] = useState('')
 
 
-    function handleSubscribeClick(): void {
-        window.location.href = window.location.pathname + '#home';
-        window.location.reload();
+    async function handleSubscribeClick(): Promise<void> {
+        try {
+            await subscribeNewsletter(email)
+            window.location.href = window.location.pathname + '#home';
+            window.location.reload();
+        }
+        catch (err: any) {
+            console.log("newlester api error", err)
+        }
     }
 
     return (

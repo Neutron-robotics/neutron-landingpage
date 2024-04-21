@@ -2,25 +2,17 @@ import { TextField } from '@mui/material';
 import styles from '../css/contact.module.css'
 import EmptyTextarea from './TextAreaAutosize';
 import { useRef, useState } from 'react';
-
-
-interface IContactForm {
-    firstName: string
-    lastName: string
-    email: string
-    phone: string
-    message: string
-}
+import { ContactFormModel, subscribeContactForm } from '@/api/website';
 
 const ContactPage = () => {
-    const [form, setForm] = useState<Partial<IContactForm>>({})
+    const [form, setForm] = useState<Partial<ContactFormModel>>({})
     const [isEmailError, setIsEmailError] = useState<boolean>(false)
     const [isLastnameError, setIsLastnameError] = useState<boolean>(false)
     const [isFirstNameError, setIsFirstNameError] = useState<boolean>(false)
     const [isPhoneError, setIsPhoneError] = useState<boolean>(false)
     const formFeedback = useRef<HTMLSpanElement>(null)
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (!formFeedback.current)
             return
 
@@ -32,13 +24,13 @@ const ContactPage = () => {
         }
         else
             setIsEmailError(false)
-        if (!form.firstName?.length) {
+        if (!form.firstname?.length) {
             setIsFirstNameError(true)
             return
         }
         else
             setIsFirstNameError(false)
-        if (!form.lastName?.length) {
+        if (!form.lastname?.length) {
             setIsLastnameError(true)
             return
         }
@@ -51,15 +43,17 @@ const ContactPage = () => {
         else
             setIsPhoneError(false)
 
-        console.log('Submitting form', form)
-
-        formFeedback.current.textContent = "We'll reach you soon!"
-        formFeedback.current.className = 'success'
-
-        formFeedback.current.textContent = "[Error description]"
-        formFeedback.current.className = 'error'
+        try {
+            await subscribeContactForm(form as ContactFormModel)
+            formFeedback.current.textContent = "We'll reach you soon!"
+            formFeedback.current.className = 'success'
+        }
+        catch (err: any) {
+            console.log("Form error", err)
+            formFeedback.current.textContent = err.message
+            formFeedback.current.className = 'error'
+        }
     }
-
 
     return (
         <>
@@ -67,15 +61,15 @@ const ContactPage = () => {
             <section className={`section ${styles.contact_section}`}>
                 <div className={`content ${styles.form}`}>
                     <div className={styles.form_textfields}>
-                        <TextField required error={isFirstNameError} onChange={e => setForm({ ...form, firstName: e.target.value })} fullWidth label="First Name" variant="outlined" />
-                        <TextField required error={isLastnameError} onChange={e => setForm({ ...form, lastName: e.target.value })} fullWidth label="Last Name" variant="outlined" />
+                        <TextField required error={isFirstNameError} onChange={e => setForm({ ...form, firstname: e.target.value })} fullWidth label="First Name" variant="outlined" />
+                        <TextField required error={isLastnameError} onChange={e => setForm({ ...form, lastname: e.target.value })} fullWidth label="Last Name" variant="outlined" />
                     </div>
                     <div className={styles.form_textfields}>
                         <TextField required error={isEmailError} onChange={e => setForm({ ...form, email: e.target.value })} fullWidth type='email' label="Email Address" variant="outlined" />
                         <TextField required error={isPhoneError} onChange={e => setForm({ ...form, phone: e.target.value })} fullWidth type='tel' label="Phone No." variant="outlined" />
                     </div>
                     <div className={styles.form_textfields}>
-                        <EmptyTextarea onChange={e => setForm({ ...form, message: e.target.value })} fullWidth minRows={8} placeholder='Message..' />
+                        <EmptyTextarea value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} style={{ width: '100%' }} minRows={8} placeholder='Message..' />
                     </div>
                     <span ref={formFeedback} />
                     <a onClick={handleSubmit} type="submit" className={`${styles.button} button`}>
