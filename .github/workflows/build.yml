@@ -13,6 +13,7 @@ jobs:
           node-version: 18
           registry-url: "https://npm.pkg.github.com"
       - run: |
+          cd ./home
           npm install
           npm run build
         env:
