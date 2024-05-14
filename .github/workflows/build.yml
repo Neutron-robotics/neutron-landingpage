@@ -12,9 +12,8 @@ jobs:
         with:
           node-version: 18
           registry-url: "https://npm.pkg.github.com"
-      - run: |
-          cd ./home
-          npm install
-          npm run build
+      - run: cd ./home
+      - run: npm install
+      - run: npm run build
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}        
