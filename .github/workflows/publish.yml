@@ -42,6 +42,6 @@ jobs:
         with:
           context: ./home
           push: true
-          tags: ${{ env.REGISTRY }}hugosoft/neutron-web:latest
+          tags: ${{ env.REGISTRY }}hugosoft/neutron-landingpage:latest
           build-args: |
             GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
