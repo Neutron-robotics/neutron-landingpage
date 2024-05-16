@@ -80,8 +80,7 @@ const ContactPage = () => {
                     <span className={`section_subtitle`}>Get in touch</span>
                     <span className={`section_title ${styles.contact_title}`}>Request for early access</span>
                     <p className={styles.contact_content}>
-                        The platform is still at a development stage, we would benefit a lot by having key users.
-                        By joining the project at its early stage you can help us a lot to improve the service
+                        The platform is still in development, and we would greatly benefit from key users. By joining early, you can significantly help us enhance the service.
                     </p>
                 </div>
             </section>

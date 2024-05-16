@@ -2,6 +2,7 @@
 import { Providers } from "./provider"
 import "./globals.css";
 import './properties.css'
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   title: 'Neutron Robotics',
@@ -26,6 +27,7 @@ export default function RootLayout({
           {children}
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-LNBMJM7K5Q" />
     </html>
   )
 }

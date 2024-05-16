@@ -25,6 +25,7 @@
   color: #878787;
   font-weight: bold;
   font-family: Jost;
+  font-weight: bold;
 }
 
 .mission_section .iceberg_labels li {
@@ -33,14 +34,7 @@
   font-family: Roboto;
 }
 
-.mission_section .iceberg_labels span {
-  font-size: 20px;
-  color: #878787;
-  font-weight: bold;
-}
-
 .mission_section .content {
-  margin-top: clamp(80px, 7vw, 95px);
   margin-bottom: calc(clamp(100px, 7vw, 120px) - 3.3vw);
   align-items: baseline;
   padding: 0 100px;
@@ -84,8 +78,24 @@
 
 @media screen and (max-width: 500px) {
   .mission_section .home_iceberg_img {
-    height: 480px;
-    width: 240px;
+    height: 384px;
+    width: 192px;
+  }
+
+  .mission_section .home_bg_shape {
+    height: 100px;
+    width: 100px;
+  }
+
+  .mission_section .iceberg_labels span {
+    font-size: 16px;
+  }
+
+  .mission_section .iceberg_labels li {
+    font-size: 14px;
+  }
+  .mission_section .iceberg_labels {
+    gap: 80px
   }
 }
 

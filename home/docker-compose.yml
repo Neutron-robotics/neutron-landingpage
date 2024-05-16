@@ -5,9 +5,9 @@ services:
     build:
       context: .
     container_name: neutron-landingpage
-    image: neutron-landingpage-1
+    image: registry.hugosoft.dev/hugosoft/neutron-landingpage:latest
     restart: unless-stopped
     environment:
       - NODE_ENV=production
     ports:
-      - "3000:80"
+      - "22300:3000"

@@ -110,12 +110,12 @@ ol {
 .link {
   display: inline-block;
   position: relative;
-  color: var(--light_blue);
+  color: #6133B8;
   text-decoration: none;
 }
 
 .link:hover {
-  color: var(--light_blue);
+  color: #6133B8;
 }
 
 .link::before {
@@ -126,7 +126,7 @@ ol {
   height: 1px;
   top: 75%;
   left: 0;
-  background-color: var(--light_blue);
+  background-color: #6133B8;
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
@@ -162,8 +162,7 @@ ol {
   cursor: pointer;
 }
 
-.button:hover {
-  /* background-color: var(--fade_light_blue); */
+.button:hover {  
   box-shadow: 0 0 20px #6133b8;
 }
 
@@ -176,7 +175,7 @@ ol {
   height: 13px;
   margin-left: 15px;
   fill: none;
-  stroke: var(--light_blue);
+  stroke: #6133B8;
   stroke-width: 3px;
   stroke-linecap: round;
   stroke-linejoin: round;

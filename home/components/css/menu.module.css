@@ -59,7 +59,7 @@
   }
   
   .menu_div .menu_icon:hover {
-    stroke: var(--light_blue);
+    stroke: #6133B8;
   }
   
   .menu_div .menu ol {
@@ -104,7 +104,7 @@
   }
   
   .menu_div .menu .not_button:hover {
-    color: var(--light_blue);
+    color:  #6133B8;
   }
   
   .menu_div .menu .button {
@@ -117,7 +117,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: var(--light_blue);
+    color:  #6133B8;
     padding: 13.5px 30px 13.5px 34.5px;
   }
   

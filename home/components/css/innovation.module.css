@@ -20,7 +20,7 @@
 
 .carousel_container .carousel_img {
   border-radius: 10px;
-  width: 400px
+  width: 400px;
 }
 
 .innovation_section .content {
@@ -56,5 +56,12 @@
 }
 
 @media screen and (max-width: 500px) {
+  .carousel_container > div {
+    width: 300px;
+  }
 
+  .carousel_container .carousel_img {
+    width: 200px;
+    height: 200px;
+  }
 }

@@ -95,7 +95,7 @@ const Header = (props: HeaderProps) => {
                 </li>
               </ol>
             </div>
-            <svg className={styles.menu_icon} style={{ display: displayHeaderMenu ? 'none' : 'block' }} onClick={() => handleMenuIconClick(true)} viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+            <svg className={`${styles.menu_icon} ${headerDetached ? styles.menu_icon_attached : styles.menu_icon_detached}`} style={{ display: displayHeaderMenu ? 'none' : 'block' }} onClick={() => handleMenuIconClick(true)} viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
               <line x1="10" y1="10" x2="130" y2="10" />
               <line x1="30" y1="50" x2="130" y2="50" />
               <line x1="50" y1="90" x2="130" y2="90" />

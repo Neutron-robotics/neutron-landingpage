@@ -189,8 +189,16 @@
   transition: stroke 0.2s ease;
 }
 
+.header .menu_icon_attached {
+  stroke: var(--white);
+}
+
+.header .menu_icon_detached {
+  stroke: var(--black_text);
+}
+
 .header .menu_icon:hover {
-  stroke: var(--light_blue);
+  stroke: #6133B8;
 }
 
 .header .in_animation {

@@ -18,26 +18,19 @@ const InnovationPage = () => {
                     <span className={`${styles.section_title} section_title`}>A Platform For Encouraging Innovation</span>
                     <div className='body_paragraph'>
                         <p>
-                            In the ever-evolving world of robotics and Industry 4.0, it can be challenging to keep up with the latest
-                            technologies and best practices. Our platform simplifies the development, real-time control, and service supervision
-                            of robotic systems, allowing you to focus on what matters most: innovation.
+                            Keeping up with robotics and Industry 4.0 can be tough. Our platform simplifies development, control, and supervision, letting you focus on innovation.
                         </p>
                         <br />
                         <p>
-                            With our user-friendly interface, you can easily create and manage teams, define robotic systems, and build custom dashboards.
-                            Our platform is flexible and adaptable, supporting a wide range of robots and architectures.
-                            Plus, our advanced features, such as AI integration and 3D visualization,
-                            help you take your robotic solutions to the next level.
+                            Easily create and manage teams, define robotic systems, and build custom dashboards. Our flexible platform supports various robots and architectures.
                         </p>
                         <br />
                         <p>
-                            We believe that everyone should have access to powerful and affordable robotic tools.
-                            That's why we offer a variety of pricing options to fit your needs, including a free version for occasional users.
+                            Our advanced features, like AI integration and 3D visualization, help take your robotic solutions to the next level.
                         </p>
                         <br />
                         <p>
-                            Our goal is to empower you to achieve your robotic and Industry 4.0 goals.
-                            With our platform, you can focus on the essential and leave the rest to us.
+                            Our goal is to empower you to achieve your robotic and Industry 4.0 goals. Focus on the essential and leave the rest to us.
                         </p>
                     </div>
                 </div>

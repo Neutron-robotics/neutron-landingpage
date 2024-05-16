@@ -49,29 +49,21 @@ const Mission = () => {
                     <span className={`section_subtitle`}>Our mission</span>
                     <span className={`${styles.section_title} section_title`}>We help you focus on the essential</span>
                     <div className='body_paragraph'>
-                        <p className={`${styles.p_1}`}>
-                            In the fast-paced world of robotics and Industry 4.0, your focus should be on innovation, growth, and delivering exceptional value to your customers. That's where we come in. Our platform is designed to streamline your operations and empower you to concentrate on what truly matters: bringing your vision to life.
-                            When you partner with us, you gain access to a comprehensive suite of tools and services that cover every aspect of your robotics journey. From initial planning and hardware design to addressing business-specific challenges, we've got you covered. Our platform acts as a solid foundation, allowing you to build upon it with confidence, knowing that the intricate details are taken care of.
+                        <p>
+                            Focus on innovation, growth, and delivering exceptional value with our streamlined platform. We offer comprehensive tools and services for every stage of your robotics journey, from planning to addressing specific business challenges.
                         </p>
                         <br />
                         <p>
-                            Real-time control and supervision are at the heart of what we offer. With our intuitive interface and powerful capabilities, you can monitor and manage your robotic fleet effortlessly, ensuring smooth operations and swift responses to any changes or challenges that arise.
+                            Our intuitive interface ensures smooth operations and swift responses with real-time control and supervision of your robotic fleet.
                         </p>
                         <br />
                         <p>
-                            But it doesn't stop there. We understand the importance of data in driving informed decision-making and improving performance. Our robust data management solutions provide you with the insights you need to optimize your processes, enhance efficiency, and stay ahead of the curve.
-                            Performance dashboards offer a bird's-eye view of your operations, giving you valuable insights into key metrics and trends. With this information at your fingertips, you can identify areas for improvement and make data-driven decisions with confidence.
+                            Our data management solutions provide insights to optimize processes and enhance efficiency. Performance dashboards offer a clear view of key metrics and trends, helping you make data-driven decisions.
                         </p>
                         <br />
                         <p>
-                            As your business grows, scalability becomes increasingly important. Our platform is designed to grow with you, providing the flexibility and scalability you need to expand your operations seamlessly and adapt to changing demands.
+                            Our scalable platform grows with your business, adapting to changing demands. Predictive maintenance uses advanced analytics to anticipate issues, minimizing downtime and maximizing productivity.
                         </p>
-                        <br />
-                        <p>
-                            Predictive maintenance is another key feature of our platform. By leveraging advanced analytics and machine learning algorithms, we can anticipate potential issues before they occur, minimizing downtime and maximizing productivity.
-                        </p>
-                        <div className={`${styles.photo}`} >
-                        </div>
                     </div>
                 </div>
             </section>
