@@ -1,21 +1,30 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import { Providers } from "./provider"
-import "./globals.css";
-import './properties.css'
+import "../globals.css";
+import '../properties.css'
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { NextIntlClientProvider } from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+} from "next-intl/server";
 
 export const metadata = {
   title: 'Neutron Robotics',
   description: 'Connect and Manage your robots in the simpliest way',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+  params: { locale },
+}: Readonly<{
+  children: React.ReactNode;
+  params: { locale: string };
+}>) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -24,10 +33,30 @@ export default function RootLayout({
       </head>
       <body >
         <Providers>
-          {children}
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
         </Providers>
       </body>
       <GoogleAnalytics gaId="G-LNBMJM7K5Q" />
-    </html>
+    </html >
   )
+}
+
+const locales = ["en", "fr"];
+
+function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("title"),
+  };
 }

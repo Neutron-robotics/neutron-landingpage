@@ -1,0 +1,77 @@
+{
+  "Header": {
+    "home": "Accueil",
+    "service": "Service",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "contact": "Contactez-nous",
+    "access": "Accéder à l'application"
+  },
+  "Index": {
+    "title": "Donnez vie à vos robots ",
+    "intro": "Faites passer votre solution robotique au niveau supérieur en la connectant à notre plateforme intelligente et évolutive",
+    "getStarted": "Démarrer"
+  },
+  "Mission": {
+    "focusOn": "Concentrez-vous sur:",
+    "planning": "Planification",
+    "hardwareConception": "Conception matérielle",
+    "businessSpecifics": "Spécificités commerciales",
+    "weTakeCareOf": "Pendant que nous nous occupons de:",
+    "realTimeControl": "Contrôle en temps réel",
+    "supervision": "Supervision",
+    "dataManagement": "Gestion des données",
+    "performanceDashboards": "Tableaux de bord de performance",
+    "scaling": "Mise à l'échelle",
+    "predictiveMaintenance": "Maintenance prédictive",
+    "teamFunctionalities": "Fonctionnalités d'équipe",
+    "ourMission": "Notre mission",
+    "focusOnEssential": "Nous vous aidons à vous concentrer sur l'essentiel",
+    "introParagraph": "Concentrez-vous sur l'innovation, la croissance et la livraison de valeur exceptionnelle avec notre plateforme rationalisée. Nous offrons des outils et des services complets pour chaque étape de votre parcours en robotique, de la planification à l'adresse des défis commerciaux spécifiques.",
+    "secondParagraph": "Notre interface intuitive assure des opérations fluides et des réponses rapides avec le contrôle et la supervision en temps réel de votre flotte robotique.",
+    "thirdParagraph": "Nos solutions de gestion des données fournissent des informations pour optimiser les processus et améliorer l'efficacité. Les tableaux de bord de performance offrent une vue claire des indicateurs clés et des tendances, vous aidant à prendre des décisions basées sur les données.",
+    "fourthParagraph": "Notre plateforme évolutive grandit avec votre entreprise, s'adaptant aux demandes changeantes. La maintenance prédictive utilise des analyses avancées pour anticiper les problèmes, minimisant les temps d'arrêt et maximisant la productivité."
+  },
+  "Innovation": {
+    "services": "Services",
+    "platformTitle": "Une plateforme pour encourager l'innovation",
+    "paragraph1": "Suivre le rythme de la robotique et de l'industrie 4.0 peut être difficile. Notre plateforme simplifie le développement, le contrôle et la supervision, vous permettant de vous concentrer sur l'innovation.",
+    "paragraph2": "Créez et gérez facilement des équipes, définissez des systèmes robotiques et construisez des tableaux de bord personnalisés. Notre plateforme flexible prend en charge tout type de robots et architectures.",
+    "paragraph3": "Nos fonctionnalités avancées, comme l'intégration de l'IA et la visualisation 3D, aident à porter vos solutions robotiques au niveau supérieur.",
+    "paragraph4": "Notre objectif est de vous permettre d'atteindre vos objectifs robotiques et Industrie 4.0. Concentrez-vous sur l'essentiel et laissez-nous nous occuper du reste."
+  },
+  "Video": {
+    "watchUs": "Regardez-nous",
+    "overview": "Obtenez un aperçu de la plateforme en action"
+  },
+  "Contact": {
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "message": "Message..",
+      "submit": "Soumettre maintenant"
+    },
+    "feedback": {
+      "success": "Nous vous contacterons bientôt!"
+    },
+    "contact": {
+      "subtitle": "Ecrivez nous",
+      "title": "Demande d'accès anticipé",
+      "content": "La plateforme est en phase de Beta, nous bénéficierions grandement de premiers utilisateurs. En rejoignant tôt, vous pouvez nous aider à améliorer considérablement le service."
+    }
+  },
+  "Footer": {
+    "subscribeTitle": "Abonnez-vous à notre newsletter pour les dernières actualités",
+    "emailPlaceholder": "Entrez votre email",
+    "subscribeButton": "S'abonner maintenant",
+    "nav": {
+      "home": "Accueil",
+      "service": "Service",
+      "documentation": "Documentation",
+      "blog": "Blog"
+    },
+    "copyright": "Copyright 2024 Neutron Robotics. Tous droits réservés."
+  }
+}

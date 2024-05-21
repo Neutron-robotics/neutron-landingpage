@@ -6,14 +6,15 @@ import { sleep } from "@/utils/time";
 import { inViewPort } from "@/utils/dom";
 import useOnScreen from "@/utils/useOnScreen";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import ParticleConfig from "../../public/json/particles.json"
-import ShapeImg from "../../public/shape-1.svg"
-import NeutronIconImg from "../../public/neutron-icon.svg"
-import SpeedImg from "../../public/speed.svg"
-import HandshakeImg from "../../public/handshake.svg"
-import AnalyticsImg from "../../public/analytics.svg"
-import NodeImg from "../../public/node.svg"
+import ParticleConfig from "../../../public/json/particles.json"
+import ShapeImg from "../../../public/shape-1.svg"
+import NeutronIconImg from "../../../public/neutron-icon.svg"
+import SpeedImg from "../../../public/speed.svg"
+import HandshakeImg from "../../../public/handshake.svg"
+import AnalyticsImg from "../../../public/analytics.svg"
+import NodeImg from "../../../public/node.svg"
 import { loadBasic } from "@tsparticles/basic";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 interface HomeProps {
@@ -23,6 +24,8 @@ interface HomeProps {
 // eslint-disable-next-line react/display-name
 const Homepage = forwardRef((props: HomeProps, ref: any) => {
     const [initParticles, setInitParticles] = useState(false);
+    console.log([props])
+    const t = useTranslations('Index');
     const {
         homeRef
     } = props
@@ -71,13 +74,13 @@ const Homepage = forwardRef((props: HomeProps, ref: any) => {
                 )}
                 <div className={`${styles.container}`}>
                     <div className={`${styles.text_content}`} ref={targetRef}>
-                        <span className={`${styles.name} in_animation`}>The platform empowering Robotics</span>
+                        <span className={`${styles.name} in_animation`}>{t('title')}</span>
                         <p className={`in_animation ${styles.intro}`}>
-                            Integrate your robotic solution into a platform that will bring it to the next level
+                            {t('intro')}
                         </p>
                         <div className={`in_animation`}>
                             <a className={`button ${styles.home_button}`} href="#mission">
-                                <p>Get Started</p>
+                                <p>{t('getStarted')}</p>
                                 <svg className={`button_arrow`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.69 17.39"><g>
                                     <path className={`path_1`} d="M8.9 12.4 L8.9 12.4" />
                                     <path className={`path_2`} d="M16.2 5 8.9 12.4 1.5 5" />

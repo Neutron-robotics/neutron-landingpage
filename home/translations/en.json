@@ -1,0 +1,77 @@
+{
+  "Header": {
+    "home": "Home",
+    "service": "Service",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "contact": "Contact Us",
+    "access": "Access Application"
+  },
+  "Index": {
+    "title": "The platform empowering Robotics",
+    "intro": "Integrate your robotic solution into a platform that will bring it to the next level.",
+    "getStarted": "Get Started"
+  },
+  "Mission": {
+    "focusOn": "Focus on:",
+    "planning": "Planning",
+    "hardwareConception": "Hardware Conception",
+    "businessSpecifics": "Business specifics",
+    "weTakeCareOf": "While we take care of:",
+    "realTimeControl": "Real Time Control",
+    "supervision": "Supervision",
+    "dataManagement": "Data Management",
+    "performanceDashboards": "Performance Dashboards",
+    "scaling": "Scaling",
+    "predictiveMaintenance": "Predictive Maintenance",
+    "teamFunctionalities": "Team Functionalities",
+    "ourMission": "Our mission",
+    "focusOnEssential": "We help you focus on the essential",
+    "introParagraph": "Focus on innovation, growth, and delivering exceptional value with our streamlined platform. We offer comprehensive tools and services for every stage of your robotics journey, from planning to addressing specific business challenges.",
+    "secondParagraph": "Our intuitive interface ensures smooth operations and swift responses with real-time control and supervision of your robotic fleet.",
+    "thirdParagraph": "Our data management solutions provide insights to optimize processes and enhance efficiency. Performance dashboards offer a clear view of key metrics and trends, helping you make data-driven decisions.",
+    "fourthParagraph": "Our scalable platform grows with your business, adapting to changing demands. Predictive maintenance uses advanced analytics to anticipate issues, minimizing downtime and maximizing productivity."
+  },
+  "Innovation": {
+    "services": "Services",
+    "platformTitle": "A Platform For Encouraging Innovation",
+    "paragraph1": "Keeping up with robotics and Industry 4.0 can be tough. Our platform simplifies development, control, and supervision, letting you focus on innovation.",
+    "paragraph2": "Easily create and manage teams, define robotic systems, and build custom dashboards. Our flexible platform supports various robots and architectures.",
+    "paragraph3": "Our advanced features, like AI integration and 3D visualization, help take your robotic solutions to the next level.",
+    "paragraph4": "Our goal is to empower you to achieve your robotic and Industry 4.0 goals. Focus on the essential and leave the rest to us."
+  },
+  "Video": {
+    "watchUs": "Watch Us",
+    "overview": "Get an overview of the platform at work"
+  },
+  "Contact": {
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone No.",
+      "message": "Message..",
+      "submit": "Submit now"
+    },
+    "feedback": {
+      "success": "We'll reach you soon!"
+    },
+    "contact": {
+      "subtitle": "Get in touch",
+      "title": "Request for early access",
+      "content": "The platform is still in development, and we would greatly benefit from key users. By joining early, you can significantly help us enhance the service."
+    }
+  },
+  "Footer": {
+    "subscribeTitle": "Subscribe To Our Newsletter For Latest Update",
+    "emailPlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe Now",
+    "nav": {
+      "home": "Home",
+      "service": "Service",
+      "documentation": "Documentation",
+      "blog": "Blog"
+    },
+    "copyright": "Copyright 2024 Neutron Robotics. All rights reserved."
+  }
+}

@@ -1,4 +1,9 @@
+import Link from 'next/link'
 import styles from './css/menu.module.css'
+import { IconButton } from '@mui/material'
+import FrLogo from "../../public/fr.png"
+import UsLogo from "../../public/us.png"
+import Image from "next/image";
 
 interface MenuProps {
     onMenuClick: (active: boolean) => void
@@ -37,6 +42,18 @@ const Menu = (props: MenuProps) => {
                         </a>
                     </li>
                 </ol>
+                <div className={styles.languages}>
+                    <Link href="/fr">
+                        <IconButton color="primary" aria-label="French Flag">
+                            <Image src={FrLogo} alt="fr" height={20} />
+                        </IconButton>
+                    </Link>
+                    <Link href="/en">
+                        <IconButton color="primary" aria-label="US Flag">
+                            <Image src={UsLogo} alt="us" height={20} />
+                        </IconButton>
+                    </Link>
+                </div>
             </div>
         </div>
     )
