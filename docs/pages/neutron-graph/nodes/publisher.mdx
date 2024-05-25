@@ -1,0 +1,25 @@
+import Image from 'next/image'
+
+## Publisher Node (ROS2)
+
+<Image src="/screenshot/node-publisher.png" alt="Publisher Node UI" width={200} height={200} />
+
+**Type:** ROS2
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Publisher Node enables your robot to publish messages to a specific ROS2 topic. This node acts as a source of information, broadcasting data to any nodes that are subscribed to the designated topic. It plays a crucial role in communication and coordination within your ROS2-based robot system.
+
+**Settings Parameters:**
+
+*   **Topic:** Specify the name of the ROS2 topic where you want to publish messages (e.g., `/cmd_vel`).
+
+**Input:**
+
+*   `msg.payload`: The message payload you want to publish. The structure of this payload should conform to the message type expected by the specified topic.
+
+**Output:**
+
+*   (None) The Publisher Node does not have any output connections. It simply publishes the message to the specified topic.

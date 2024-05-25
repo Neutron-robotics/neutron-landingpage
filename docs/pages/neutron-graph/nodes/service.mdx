@@ -1,0 +1,25 @@
+import Image from 'next/image'
+
+## Service Node (ROS2)
+
+<Image src="/screenshot/node-service.png" alt="Service Node UI" width={200} height={200} />
+
+**Type:** ROS2
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Service Node enables your robot to interact with ROS2 services. Services provide a request-response communication mechanism, allowing you to send a request to a service server and receive a corresponding response. This node is useful for triggering specific actions, retrieving data from other nodes, or performing on-demand computations.
+
+**Settings Parameters:**
+
+*   **Service:** Specify the name of the ROS2 service you want to interact with (e.g., `/get_map`).
+
+**Input:**
+
+*   `msg.payload`: The request message payload you want to send to the service server. The structure of this payload should conform to the service definition.
+
+**Output:**
+
+*   `msg.payload`: The response message payload received from the service server. The structure of this payload will depend on the specific service definition.

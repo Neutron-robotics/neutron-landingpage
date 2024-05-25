@@ -1,0 +1,25 @@
+import Image from 'next/image'
+
+### Info Node
+
+<Image src="/screenshot/node-info.png" alt="Info Node UI" width={200} height={200} />
+
+**Type:** General
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Info Node logs informational messages to the Neutron console, providing insights into the flow's execution. You can use it to track variables, display status updates, or output any relevant information during runtime.
+
+**Settings Parameters:**
+
+*   **Message:** The text you want to log to the console. You can use variables from the `msg` object using double curly braces `{{ }}`.
+
+**Input:**
+
+*   `msg`: The message object, typically containing a payload and other data.
+
+**Output:**
+
+*   `msg`: The same message object is passed through without modification.

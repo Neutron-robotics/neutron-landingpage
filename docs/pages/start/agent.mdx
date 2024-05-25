@@ -2,7 +2,7 @@
 
 The Neutron Agent is a crucial component that enables seamless communication and control between your robot and the Neutron platform. Think of it as the brain of your robot, allowing it to understand and execute commands sent from the platform.
 
-[LIKE_THIS_AGENT_DIAGRAM]
+![Hello](/screenshot/neutron-agent-diagram.png)
 
 #### Why Install the Agent? 🤔
 
@@ -14,18 +14,17 @@ The Neutron Agent is a crucial component that enables seamless communication and
 #### Installation Steps ⚙️
 
 1. **Download the Agent:**
-   * Visit the Neutron website or your project's resources page to download the Neutron Agent installer. [LIKE_THIS_DOWNLOAD_BUTTON]
+   * Download the agent by [visiting the Github page](https://github.com/neutron-robotics/neutron-agent) and following the instructions 
 
-2. **Run the Installer:**
+2. **Install the agent:**
    * Open a terminal or command prompt on your robot's operating system.
-   * Navigate to the directory where you downloaded the installer.
-   * Execute the following command, replacing `<installer_file>` with the actual name of the installer:
+   * Execute the install script for the agent
      ```bash
-     ./<installer_file>
+     python3 install.py
      ```
 
 3. **Configuration:**
-   * During the installation process, you'll be prompted to specify the location where you want to store the agent's configuration files. The default location is usually `~/.neutron-agent`. [LIKE_THIS_CONFIGURATION_PROMPT]
+   * During the installation process, you'll be prompted to specify the location where you want to store the agent's configuration files. The default location is usually `~/.neutron-agent`
 
 4. **Verification:**
    * After installation, run the following command to ensure the agent is installed correctly and accessible:
@@ -41,6 +40,6 @@ The Neutron Agent is a crucial component that enables seamless communication and
     ```
     * You'll be asked to enter a unique linking key found in the robot's menu on the Neutron web interface. 
 
-[LIKE_THIS_TERMINAL_LINKING]
+![Hello](/screenshot/new-robot-link.png)
 
 **Congratulations!** You've successfully installed the Neutron Agent and linked your robot to the platform. You're now ready to dive into the exciting world of robot control and automation!

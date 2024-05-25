@@ -1,0 +1,25 @@
+import Image from 'next/image'
+
+### Debug Node
+
+<Image src="/screenshot/node-debug.png" alt="Debug Node UI" width={200} height={200} />
+
+**Type:** General
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+Similar to the Info Node, the Debug Node logs messages to the console, but it's specifically intended for debugging purposes. You can use it to inspect the contents of message objects, track values, or troubleshoot issues during development.
+
+**Settings Parameters:**
+
+*   **Message:** The text or variable you want to log to the console. Use double curly braces `{{ }}` to embed variables from the `msg` object.
+
+**Input:**
+
+*   `msg`: The message object you want to inspect.
+
+**Output:**
+
+*   `msg`: The original message object passes through unchanged.

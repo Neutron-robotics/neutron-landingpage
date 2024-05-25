@@ -1,0 +1,47 @@
+import Image from 'next/image'
+
+## Inject Node (Flow Graph)
+
+<Image src="/screenshot/node-inject.png" alt="Inject Node UI" width={200} height={200} />
+
+**Type:** Flow Control
+
+**Compatible with:** Flow Graph
+
+**Description:**
+
+The Inject Node is a versatile tool for initiating flows or introducing data at specific intervals within a Flow Graph. It allows you to manually trigger events or set up automatic injections based on intervals or cron schedules. The payload of the injected message can be a variety of types, including strings, numbers, objects, or even dynamically generated data.
+
+**Settings Parameters:**
+
+*   **Payload:**
+    *   **Type:** Select the data type of the payload (e.g., String, Number, JSON).
+    *   **Value:**  Enter the actual payload data or a valid expression for the selected type.
+*   **Topic:** (Optional) Specify a topic for the injected message (useful for filtering in other nodes).
+*   **Repeat:**
+    *   **Interval:** Inject messages at regular intervals.
+    *   **Cron:** Inject messages based on a cron schedule.
+    *   **None:** Inject only once when manually triggered or at the start of the flow (if configured).
+*   **Interval/Cron Configuration:**  If using "Interval" or "Cron," configure the interval duration or cron expression accordingly.
+
+**Input:**
+
+*   (None) The Inject Node does not have any input connections.
+
+**Output:**
+
+*   `msg`: The message object with the defined payload and topic.
+
+**Example Usage:**
+
+1.  **Configure Payload:** Choose the data type and enter the payload value.
+2.  **Set Repeat Mode:** Select "Interval," "Cron," or "None" depending on your injection requirements.
+3.  **Configure Interval/Cron:** If applicable, set the interval duration or cron expression.
+4.  **Connect Node:** Connect the output of the Inject Node to the input of another node in your flow.
+5.  **(Optional) Manual Trigger:** In debug mode, click the button on the node to manually inject a message.
+
+**Tips:**
+
+*   Use the Inject Node to simulate sensor data, trigger specific actions, or start complex sequences of events.
+*   The flexibility of the payload type allows you to inject a wide range of data, from simple values to complex objects.
+*   Experiment with different repeat modes to create dynamic and responsive behaviors in your robot applications.

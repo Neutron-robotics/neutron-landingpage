@@ -1,0 +1,27 @@
+import Image from 'next/image'
+
+### Error Node
+
+<Image src="/screenshot/node-error.png" alt="Error Node UI" width={200} height={200} />
+
+**Type:** General
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Error Node is used to explicitly trigger errors within your flow graph. It logs an error message to the console and optionally displays a pop-up notification to the user. This node is crucial for handling exceptions, terminating flows gracefully, and alerting users to critical issues.
+
+**Settings Parameters:**
+
+*   **Message:** The error message to display in the console and optionally in the pop-up.
+*   **Close Automatically (default):** If enabled, the pop-up automatically closes after 5 seconds.
+*   **Need Acknowledgement:** If enabled, the pop-up requires user acknowledgment before closing.
+
+**Input:**
+
+*   `msg`: The message object, often containing details about the error.
+
+**Output:**
+
+*   (None) The Error Node does not have an output as it typically terminates the flow.

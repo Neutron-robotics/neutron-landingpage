@@ -1,5 +1,4 @@
 {
     "create": "Create a robot",
-    "parts": "Create a robot part",
-    "protocol": "Define a ROS protocol"
+    "parts": "Create a robot part"
 }

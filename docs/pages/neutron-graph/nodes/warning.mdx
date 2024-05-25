@@ -1,0 +1,25 @@
+import Image from 'next/image'
+
+### Warning Node
+
+<Image src="/screenshot/node-warning.png" alt="Warning Node UI" width={200} height={200} />
+
+**Type:** General
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Warning Node logs warning messages to the console, indicating potential issues or non-critical errors in your flow. It helps you identify areas that might require attention but do not necessarily halt execution.
+
+**Settings Parameters:**
+
+*   **Message:** The warning message to be displayed in the console. You can include variables using double curly braces `{{ }}`.
+
+**Input:**
+
+*   `msg`: The message object, usually containing information related to the warning.
+
+**Output:**
+
+*   `msg`: The input message passes through without alteration.

@@ -1,0 +1,34 @@
+import Image from 'next/image'
+
+## Camera Frame Controller Node
+
+<Image src="/screenshot/node-cameraframe.png" alt="Camera Frame Controller Node UI" width={200} height={200} />
+
+**Type:** Connector
+
+**Compatible with:** Connector Graph
+
+**Description:**
+
+The Camera Frame Controller Node is designed to display images from your robot's camera directly within the Neutron interface. It receives image data in base64 format and renders it in a designated UI element, providing a real-time visual representation of the camera's view.
+
+**Input:**
+
+*   `msg.payload`: A string containing the base64-encoded image data.
+
+**Output:**
+
+*   (None) The node does not have any explicit output connections. It renders the received image directly in the associated UI element within the Neutron interface.
+
+**Example Usage:**
+
+1.  **Add to Interface:** Drag and drop the Camera Frame Controller Node onto your Connector Graph.
+2.  **Link to UI Element:** Connect the node to an Image UI element in your interface.
+3.  **Send Image Data:** Ensure that your robot's software is configured to send base64-encoded image data to the `msg.payload` input of this node.
+4.  **View Image:** The received image will be displayed in the linked Image UI element.
+
+**Important Considerations:**
+
+*   **Image Encoding:** Make sure the image data sent to the node is correctly encoded in base64 format.
+*   **Image Size:** Large images may take longer to transmit and render. Consider optimizing image size or compression for smoother performance.
+*   **Frame Rate:** The node will render each new image it receives. If your robot sends images at a high frame rate, the UI may not be able to keep up, resulting in dropped frames. You can use a Rate Limiting Node to control the frequency of image updates if needed.

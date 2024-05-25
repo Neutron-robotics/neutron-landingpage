@@ -1,0 +1,35 @@
+import Image from 'next/image'
+
+## Switch Node
+
+<Image src="/screenshot/node-switch.png" alt="Switch Node UI" width={200} height={200}/>
+
+**Type:** Function
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Switch Node acts as a conditional router for messages, directing them to different outputs based on the value of a specified property or their position in a sequence. This node enables dynamic decision-making within your flows, allowing you to create branching logic based on various conditions.
+
+
+**Settings Parameters (Rules):**
+
+*   **Property:** The dot-notation path to the property within the `msg` object that you want to evaluate (e.g., `msg.payload.status`). Alternatively, you can select "env." to evaluate an environment variable.
+*   **Comparison Operator:**  Choose a comparison operator (e.g. == != > < contains, regex) to define the matching condition.
+*   **Value/Pattern:** Enter the value or pattern to compare against the property.  For "contains" and "regex," enter a string or regular expression.
+*   **Output:** Select the output port (1, 2, etc.) to which the message should be sent if the rule matches.
+
+
+**Additional Settings:**
+
+*   **Verify all the rules:** Evaluates all rules and sends the message to all matching outputs.
+*   **Stops when match:** Stops evaluating rules as soon as one rule matches and sends the message to the corresponding output.
+
+**Input:**
+
+*   `msg`: The message object whose property will be evaluated against the defined rules.
+
+**Outputs:**
+
+*   Multiple outputs (1, 2, etc.), each corresponding to a specific rule.

@@ -1,0 +1,33 @@
+import Image from 'next/image'
+
+## Delay Node
+
+<Image src="/screenshot/node-delay.png" alt="Delay Node UI" width={200} height={200}/>
+
+**Type:** Function
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Delay Node introduces a pause in the flow of messages within your graph. This delay can be a fixed duration or a random interval within a specified range. The node is non-blocking, meaning that it delays the processing of the current message without interrupting the execution of other nodes in the graph.
+
+**Settings Parameters:**
+
+*   **Action:**
+    *   **Delay:** Introduces a fixed delay.
+    *   **Random Delay:** Introduces a random delay within a specified range.
+*   **Between/For (depending on selected Action):**
+    *   **Between:** The minimum and maximum values of the random delay range.
+    *   **For:** The fixed duration of the delay.
+*   **Unit:**
+    *   **Seconds:** The unit of time for the delay.
+    *   **Milliseconds:** The unit of time for the delay.
+
+**Input:**
+
+*   `msg`: The message object to be delayed.
+
+**Output:**
+
+*   `msg`: The same message object, emitted after the specified delay.

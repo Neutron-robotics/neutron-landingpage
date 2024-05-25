@@ -25,7 +25,8 @@ const config: DocsThemeConfig = {
   },
   sidebar: {
     defaultMenuCollapseLevel: 1
-  }
+  },
+  docsRepositoryBase: 'https://neutron-robotics/docs'
 }
 
 export default config
