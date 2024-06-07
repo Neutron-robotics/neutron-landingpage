@@ -75,7 +75,7 @@ const Header = (props: HeaderProps) => {
         <header className={styles.header}>
           <nav className={styles.nav}>
             <div className={styles.logo}>
-              <a className={`${styles.in_animation} ${styles.in_animation}`} ref={el => (itemRefs as any).current[0] = el} href="https://hugoperier.fr/">
+              <a className={`${styles.in_animation} ${styles.in_animation}`} ref={el => (itemRefs as any).current[0] = el} href="https://neutron-robotics.com/">
                 <Image src={NeutronLogo} alt="logo" width={205} height={35} />
               </a>
             </div>
@@ -83,7 +83,7 @@ const Header = (props: HeaderProps) => {
               <ol>
                 <li ref={el => (itemRefs as any).current[1] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#home">{t('home')}</a></li>
                 <li ref={el => (itemRefs as any).current[2] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#innovation">{t('service')}</a></li>
-                <li ref={el => (itemRefs as any).current[3] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#documentation">{t('documentation')}</a></li>
+                <li ref={el => (itemRefs as any).current[3] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="https://docs.neutron-robotics.com/">{t('documentation')}</a></li>
                 <li ref={el => (itemRefs as any).current[4] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#blog">{t('blog')}</a></li>
                 <li ref={el => (itemRefs as any).current[5] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#contact">{t('contact')}</a></li>
                 <li ref={el => (itemRefs as any).current[6] = el} className={`${styles.in_animation}`}>

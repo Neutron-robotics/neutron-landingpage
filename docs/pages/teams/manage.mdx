@@ -1,0 +1,42 @@
+## Manage Users & Permissions
+
+Within a team, collaboration and access control are essential for smooth operation. Different user roles ensure that each team member has the appropriate level of access to functionalities, robot information, and control.
+
+![Hello](/screenshot/hugosoft-team.png)
+
+### User Roles
+
+The following table summarizes the permissions associated with each user role:
+
+| Role     | View Robot Metadata | Access Dashboard  | Control Robot   | Update Configuration | Manage Users |
+| :------- | :----------------- | :--------------- | :------------- | :------------------ | :---------- |
+| Guest    | ✅                   | ❌                | ❌             | ❌                  | ❌          |
+| Operator | ✅                   | ✅                | ✅             | ❌                  | ❌          |
+| Analyst  | ✅                   | ✅                | ✅             | ✅                  | ❌          |
+| Admin    | ✅                   | ✅                | ✅             | ✅                  | ✅          |
+| Owner    | ✅                   | ✅                | ✅             | ✅                  | ✅          |
+
+* **Guest:** Guests have the most limited permissions. They can view basic information about the robots but cannot access the dashboard, control robots, or modify configurations.
+* **Operator:** Operators have additional access to the dashboard and can control robots in real time. However, they cannot modify robot configurations.
+* **Analyst:** Analysts can do everything that operators can, plus they have the ability to update robot configurations. They also have access to analytics tools on the dashboard for in-depth analysis.
+* **Admin:** Admins have the highest level of permissions, except for ownership. They can perform all the tasks that analysts can, plus they can manage user permissions within the team.
+* **Owner:** The owner has full control over the team, including managing user permissions and all other aspects of team management.
+
+### Managing User Permissions
+
+As an admin or owner, you can manage user permissions by following these steps:
+
+1. Navigate to the "Team" page.
+2. Select the "Member" tab.
+3. Click on the user whose permissions you want to modify.
+4. Select the appropriate roles from the dropdown menu.
+5. Save your changes.
+
+![Hello](/screenshot/hugosoft-permissions.gif)
+
+**Important:**
+
+* Be sure to assign roles carefully to ensure that team members have the appropriate level of access.
+* The owner cannot modify their own role or the role of other owners.
+
+By understanding and managing user roles effectively, you can create a collaborative and secure environment for your team.

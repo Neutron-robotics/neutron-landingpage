@@ -1,0 +1,35 @@
+import Image from 'next/image'
+
+## Range Node
+
+<Image src="/screenshot/node-range.png" alt="Range Node UI" width={200} height={200}/>
+
+
+**Type:** Function
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Range Node linearly scales a numerical value within a message payload based on a defined input and output range. It offers flexibility in how the scaling is applied, with options to limit the output to the specified range or remove the property if it falls outside the range.
+
+**Settings Parameters:**
+
+*   **Property:** The dot-notation path to the numerical property in the `msg` object that you want to scale (e.g., `msg.payload.value`).
+*   **Action:** 
+    *   **Scale the property of the message:** Scales the property without limits.
+    *   **Scale the property of the message and limit within the range:** Scales the property and clamps the result within the output range.
+    *   **Scale the property of the message or remove it if not within the range:** Scales the property but removes it if the result falls outside the output range.
+*   **Map input data:**
+    *   **From/To:** Define the input range (the original scale of the value).
+*   **To desired scale:**
+    *   **From/To:** Define the output range (the desired scale of the value).
+*   **Round to the nearest integer:** (Optional) Rounds the scaled value to the nearest whole number.
+
+**Input:**
+
+*   `msg`: The message object containing the numerical property to be scaled.
+
+**Output:**
+
+*   `msg`: The modified message object with the scaled property, or with the property removed if the "Scale or Remove" action was chosen and the result fell outside the output range.

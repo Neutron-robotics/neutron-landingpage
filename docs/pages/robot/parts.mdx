@@ -1,0 +1,52 @@
+## Create a robot part
+
+In robotics, a **part** can represent various components of a robot, including:
+
+* **Sensors:** Devices that gather information about the robot's environment (e.g., cameras, distance sensors, IMU).
+* **Actuators:** Components that enable the robot to interact with its environment (e.g., motors, grippers, lights).
+* **Physical Elements:** Structural components that make up the robot's body (e.g., links, joints).
+
+Each part plays a crucial role in a robot's functionality. To ensure seamless communication and control, it's essential to define how each part interacts with the rest of the system. This is where **transport protocols** and **protocols** come into play.
+
+![Hello](/screenshot/hugosoft-part.png)
+
+### Transport Protocols
+
+A transport protocol governs how data is transmitted between the robot's parts and the control software. Common transport protocols in robotics include:
+
+* **TCP:** A reliable, connection-oriented protocol often used for real-time control.
+* **WS:** A lightweight protocol suitable for web-based interfaces and remote operation.
+* **ROS:** A flexible framework designed specifically for robotics, offering tools for communication, data logging, and visualization.
+
+The choice of transport protocol depends on factors like the type of robot, the desired level of control, and the network infrastructure.
+
+### Protocols
+
+Once the transport protocol is established, the next step is to define the **protocol** itself. This involves specifying the format, structure, and content of the messages exchanged between the robot's parts and the control software.
+
+For example, if you're using ROS, you would define:
+
+* **Topics:** Named channels for continuous streams of data (e.g., sensor readings, motor commands).
+* **Services:** Request-response mechanisms for triggering specific actions or obtaining information.
+* **Actions:** Goal-oriented tasks that involve a sequence of actions and feedback mechanisms.
+
+The protocol acts as a common language, ensuring that all components understand and interpret the information correctly.
+
+### Creating a Robot Part in the Interface
+
+![Hello](/screenshot/new-part.png)
+
+1. **Navigate to the "Parts" section:** In the main menu, click on "Robots," then select the specific robot you're working with. Within the robot's configuration, you'll find the "Parts" section.
+
+2. **Click "Create Part":** This will open a form where you can define the details of your new robot part.
+
+3. **Specify Part Details:** Fill in the required information, including:
+   * **Name:** A descriptive name for the part (e.g., "Left Arm," "Camera 1").
+   * **Type:** Choose from a list of predefined types (e.g., "Sensor," "Actuator," "Physical Element").
+   * **Transport Protocol:** Select the appropriate protocol (e.g., "TCP," "WS," "ROS").
+
+4. **Define Protocol:** Depending on the chosen transport protocol, you'll be presented with options to define the specific protocol details. For instance, in ROS, you would create topics, services, and actions as needed.
+
+5. **Save and Configure:** Once you've completed the form, save the part. You can then further configure its behavior and interactions within the broader robot system.
+
+By creating and configuring robot parts, you establish the foundation for effective communication and control within your robotic system. This allows you to seamlessly integrate various components, sensors, and actuators, enabling your robot to perform complex tasks and interact with its environment.

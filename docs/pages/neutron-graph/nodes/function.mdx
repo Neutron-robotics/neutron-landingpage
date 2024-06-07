@@ -1,0 +1,46 @@
+import Image from 'next/image'
+
+## Function Node
+
+<Image src="/screenshot/node-function.png" alt="Function Node UI" width={200} height={200} />
+
+**Type:** Function
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Function Node empowers you to execute custom JavaScript (or TypeScript) code on incoming messages. This flexibility allows you to perform complex calculations, data transformations, or decision-making logic directly within your Neutron graph. The function should return an object that will be used as the output message payload for subsequent nodes.
+
+**Settings Parameters (Code Editor):**
+
+The node provides a code editor where you can write your JavaScript (or TypeScript) function. The function has access to the following objects:
+
+*   `msg`: The incoming message object, which typically contains a `payload` property and other relevant data.
+*   `env`: An object for interacting with environment variables. You can use `env.get` to retrieve values and `env.store` to set or update values.
+
+**Input:**
+
+*   `msg`: The message object on which your function will operate.
+
+**Output:**
+
+*   The object returned by your function, which becomes the payload of the outgoing message.
+
+**Example Usage:**
+
+```javascript
+// Example function in the Function Node
+// Perform custom processing on the input payload
+let processedPayload = {
+  data: msg.payload.toUpperCase(),
+  timestamp: new Date().toISOString(),
+};
+
+// Accessing and storing environment variables
+let myEnvVar = env.get('MY_VAR_ENV');
+env.store('MY_VAR_ENV', processedPayload); 
+
+return processedPayload;
+```
+

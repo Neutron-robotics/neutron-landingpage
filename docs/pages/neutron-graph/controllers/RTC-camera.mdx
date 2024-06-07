@@ -1,0 +1,38 @@
+import Image from 'next/image'
+
+## RTC Camera Controller Node
+
+<Image src="/screenshot/node-rtccamera.png" alt="RTC Camera Controller Node UI" width={200} height={200} />
+
+**Type:** Connector
+
+**Compatible with:** Connector Graph
+
+**Description:**
+
+The RTC Camera Controller Node facilitates real-time video streaming from your robot's camera to the Neutron interface. It establishes a WebRTC (Web Real-Time Communication) connection with a specified host, enabling low-latency video transmission directly within your browser.
+
+**Settings Parameters:**
+
+*   **Host:** The IP address or hostname of the WebRTC server running on your robot.
+
+**Input:**
+
+*   (None) The node does not have any explicit input connections. It receives video data directly from the WebRTC connection.
+
+**Output:**
+
+*   (None) The node does not have any explicit output connections. It renders the received video stream directly in the associated UI element within the Neutron interface.
+
+**Example Usage:**
+
+1.  **Configure Host:** Enter the correct IP address or hostname of your robot's WebRTC server in the "Host" parameter.
+2.  **Add to Interface:** Drag and drop the RTC Camera Controller Node onto your Connector Graph.
+3.  **Link to UI Element:** Connect the node to a Video UI element in your interface.
+4.  **View Video Stream:** If the connection is successful, the video stream from your robot's camera will be displayed in the linked Video UI element.
+
+**Important Considerations:**
+
+*   **WebRTC Server:** Ensure that a compatible WebRTC server is running on your robot and configured to accept connections from the Neutron interface.
+*   **Network Connectivity:** A stable network connection between your robot and the Neutron interface is crucial for smooth video streaming.
+*   **Firewall/NAT:** If your robot is behind a firewall or NAT, you may need to configure port forwarding or other network settings to allow incoming WebRTC connections.

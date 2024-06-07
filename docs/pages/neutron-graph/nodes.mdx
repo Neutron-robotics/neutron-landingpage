@@ -1,0 +1,38 @@
+### Neutron Nodes
+
+Nodes are the fundamental elements within Neutron's visual programming interface. They represent individual actions, operations, or data transformations that you can connect to create complex robot behaviors. Think of them as the verbs and nouns in the language of your robot control system.
+
+**Types of Nodes**
+
+Neutron offers a rich variety of node types, each serving a specific purpose in your robot control flows:
+
+*   **General Nodes:** These nodes have for purpose to serve logging and feedback
+    *   [Debug Node](https://neutron-robotics/docs/neutron-graph/nodes/debugNode)
+    *   [Info Node](https://neutron-robotics/docs/neutron-graph/nodes/infoNode)
+    *   [Success Node](https://neutron-robotics/docs/neutron-graph/nodes/successNode)
+    *   [Warning Node](https://neutron-robotics/docs/neutron-graph/nodes/warningNode)
+    *   [Error Node](https://neutron-robotics/docs/neutron-graph/nodes/errorNode)
+
+*   **Function Nodes:** These nodes perform specific operations on the data flowing through them. They can filter, transform, analyze, or combine data in various ways.
+    *   [Function Node](https://neutron-robotics/docs/neutron-graph/nodes/functionNode)
+    *   [Switch Node](https://neutron-robotics/docs/neutron-graph/nodes/switchNode)
+    *   [Change Node](https://neutron-robotics/docs/neutron-graph/nodes/changeNode)
+    *   [Range Node](https://neutron-robotics/docs/neutron-graph/nodes/rangeNode)
+    *   [Template Node](https://neutron-robotics/docs/neutron-graph/nodes/templateNode)
+    *   [Delay Node](https://neutron-robotics/docs/neutron-graph/nodes/delayNode)
+    *   [Filter Node](https://neutron-robotics/docs/neutron-graph/nodes/filterNode)
+*   **Network Nodes:** These nodes enable communication between different parts of your robot control system, or even between different robots. They can send and receive data over various protocols, such as TCP, UDP, or ROS.
+    *   [Publisher Node (ROS2)](https://neutron-robotics/docs/neutron-graph/nodes/publisherNode)
+    *   [Subscriber Node (ROS2)](https://neutron-robotics/docs/neutron-graph/nodes/subscriberNode)
+    *   [Service Node (ROS2)](https://neutron-robotics/docs/neutron-graph/nodes/serviceNode)
+    *   [Action Node (ROS2)](https://neutron-robotics/docs/neutron-graph/nodes/actionNode)
+
+**Node Features**
+
+Each node in Neutron comes with a set of features that make them easy to use and customize:
+
+*   **Visual Representation:** Nodes are represented by intuitive icons and labels that clearly indicate their function.
+*   **Configurable Parameters:** Most nodes have parameters that you can adjust to fine-tune their behavior.
+*   **Dynamic Connections:** You can easily connect nodes by dragging and dropping their input and output ports.
+*   **Contextual Help:** Hovering over a node displays a tooltip with a brief description of its function and parameters.
+*   **Error Checking:** Neutron automatically checks for errors in your flows, such as incompatible data types or missing connections.

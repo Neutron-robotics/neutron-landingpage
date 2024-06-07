@@ -1,0 +1,25 @@
+import Image from 'next/image'
+
+### Success Node
+
+<Image src="/screenshot/node-success.png" alt="Success Node UI" width={200} height={200} />
+
+**Type:** General
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Success Node logs success messages to the console, marking the successful completion of a specific task or stage in your flow. It's a helpful tool for tracking progress and verifying that actions are executing as expected.
+
+**Settings Parameters:**
+
+*   **Message:** The success message to display.  Use double curly braces `{{ }}` to include dynamic values from the message object.
+
+**Input:**
+
+*   `msg`: The message object, often carrying data related to the successful outcome.
+
+**Output:**
+
+*   `msg`: The input message is passed through unmodified.

@@ -1,0 +1,44 @@
+import Image from 'next/image'
+
+## Base Controller Node
+
+<Image src="/screenshot/node-basecontroller.png" alt="Base Controller Node UI" width={200} height={200} />
+
+**Type:** Connector
+
+**Compatible with:** Connector Graph
+
+**Description:**
+
+The Base Controller Node is a specialized node designed to handle user input from a graphical interface and translate it into commands for controlling a wheeled robot's movement. It essentially bridges the gap between a user's actions (like using a joystick or virtual buttons) and the robot's actual motion.
+
+**Key Features:**
+
+*   **User Input Driven:**  This node doesn't require any configuration settings. It directly responds to user interactions with a linked UI element (e.g., a joystick in your interface).
+*   **Event-Based Triggering:** The node triggers an event each time the user interacts with the linked UI element. This could be a joystick movement, button press, or slider adjustment.
+*   **2D Movement Control:** Primarily designed for controlling a robot's movement in two dimensions, it typically outputs commands related to linear and angular velocity (speed and direction).
+
+**Input:**
+
+*   (None) The input is not received through a traditional node connection. Instead, it comes directly from the user interacting with the linked UI element in the graphical interface.
+
+**Output:**
+
+*   `msg`:  The output is a message object. The structure and content of this message depend on how your robot's control system is designed. It likely contains velocity commands or other data that your robot can interpret to move accordingly.
+
+**Debug Properties:**
+*   **X:** horizontal axis 
+*   **Rotation:** rotation axis
+*   **Speed:** Speed value
+
+These properties are displayed and modifiable only when testing inside the graph playground
+
+**Example Usage:**
+
+1.  **Add to Interface:** Drag and drop the Base Controller Node onto your Connector Graph.
+2.  **Link to UI Element:** In your graphical interface, connect the node to a UI element that makes sense for controlling movement (like a joystick, arrow keys, or buttons).
+3.  **Control Robot:** When you use the UI element, the node will detect the input and trigger an event, sending the appropriate commands to your robot.
+
+**Important Note:**
+
+While the Base Controller Node itself doesn't have configurable settings, the way it functions is highly dependent on how your robot's control system is set up and how you've designed your UI. Make sure to consult your robot's documentation and configure the linked UI element appropriately to ensure smooth and accurate control.

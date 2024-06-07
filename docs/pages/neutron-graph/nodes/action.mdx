@@ -1,0 +1,26 @@
+import Image from 'next/image'
+
+## Action Node (ROS2)
+
+<Image src="/screenshot/node-action.png" alt="Hello" width={200} height={200} />
+
+**Type:** ROS2
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Action Node enables your robot to interact with ROS2 actions. Actions are a way to initiate long-running tasks that provide feedback during execution and a result upon completion. This node allows you to trigger an action, monitor its progress, and receive the final outcome.
+
+**Settings Parameters:**
+
+*   **Action Server:** Specify the name of the ROS2 action server you want to interact with.
+
+**Input:**
+
+*   `msg.body`: The payload of the action's goal message. This is the data you send to the action server to initiate the task.
+
+**Outputs:**
+
+*   **Feedback:** A stream of messages providing feedback on the action's progress. You can use these messages to update your robot's behavior based on the task's current state.
+*   **Result:** The final result of the action, emitted when the task completes. This message contains information about the outcome of the action, such as success or failure, along with any relevant data.

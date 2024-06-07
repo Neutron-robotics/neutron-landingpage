@@ -1,0 +1,32 @@
+import Image from 'next/image'
+
+## Camera Controller Node
+
+<Image src="/screenshot/node-cameracontroller.png" alt="Camera Controller Node UI" width={200} height={200} />
+
+**Type:** Connector
+
+**Compatible with:** Connector Graph
+
+**Description:**
+
+The Camera Controller Node is designed to manage the activation and deactivation of a camera (or camera stream) on your robot. It interfaces with user input from a graphical interface (e.g., a button or toggle switch) and translates it into commands to control the camera's state.
+
+**Key Features:**
+
+*   **User Input Driven:** Similar to other connector nodes, the Camera Controller Node does not require manual configuration. Its behavior is determined by user interactions with the linked UI element.
+*   **Event-Based Triggering:** This node triggers an event each time the associated UI element is interacted with, indicating whether the camera should be turned on or off.
+*   **Simplified Camera Control:** It abstracts the complexities of camera hardware and communication, providing a straightforward way to manage the camera's state through your interface.
+
+**Input:**
+
+*   (None) The input is not received through a traditional node connection but directly from the user interacting with the linked UI element in the graphical interface.
+
+**Output:**
+
+*   `msg`:  An object with a single property `state`, which can be either "on" or "off," indicating the desired camera state.
+
+```json
+{
+  "state": "on" | "off"
+}

@@ -1,0 +1,30 @@
+import Image from 'next/image'
+
+## Filter Node
+
+<Image src="/screenshot/node-filter.png" alt="Filter Node UI" width={200} height={200}/>
+
+**Type:** Function
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Filter Node selectively passes messages based on changes in the payload data. It caches incoming messages and emits them to the next node only when a specified value within the payload changes. This node is particularly useful for reducing redundant data transmission and focusing on relevant updates.
+
+**Settings Parameters:**
+
+*   **Mode:**
+    *   **Block Unless Value Changes:** (Default) Emits a message only when any value within the payload changes from the previous message.
+    *   **Block Unless Value is Greater (Number Only):**  Emits a message only when a specified numeric value within the payload increases compared to the previous message or a specified reference value.
+    *   **Block Unless Value is Lower (Number Only):** Emits a message only when a specified numeric value within the payload decreases compared to the previous message or a specified reference value.
+
+*   **Property:** The dot-notation path to the specific value within the `msg` object that you want to monitor for changes (e.g., `msg.payload.temperature`).
+
+**Input:**
+
+*   `msg`: The message object whose payload will be filtered.
+
+**Output:**
+
+*   `msg`: The filtered message object, emitted only when the specified value changes (according to the chosen mode).

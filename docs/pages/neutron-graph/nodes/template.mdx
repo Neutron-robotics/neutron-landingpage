@@ -1,0 +1,27 @@
+import Image from 'next/image'
+
+## Template Node
+
+<Image src="/screenshot/node-template.png" alt="Template Node UI" width={200} height={200}/>
+
+
+**Type:** Function
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Template Node allows you to dynamically create or modify properties within a message payload using a template string. This template can incorporate variables from the incoming message, enabling you to generate custom outputs based on the message content.
+
+**Settings Parameters:**
+
+*   **Property:** The dot-notation path to the property you want to create or modify in the `msg` object (e.g., `msg.payload.formatted_output`).
+*   **Template:** A string that defines the structure of the output property. You can use double curly braces `{{ }}` to embed variables from the `msg` object. For example, `{{payload}}` will insert the value of the `msg.payload` property.
+
+**Input:**
+
+*   `msg`: The message object whose properties will be used in the template.
+
+**Output:**
+
+*   `msg`: The modified message object with the new or updated property based on the template.

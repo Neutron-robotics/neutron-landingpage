@@ -1,0 +1,50 @@
+### Setting up the Agent 🛠️
+
+The Neutron Agent is a crucial component that enables seamless communication and control between your robot and the Neutron platform. Think of it as the brain of your robot, allowing it to understand and execute commands sent from the platform.
+
+![Hello](/screenshot/neutron-agent-diagram.png)
+
+#### The agent provides the following functionalities:
+
+- **Communication Hub:** The agent establishes a reliable connection between your robot's hardware and the Neutron cloud, facilitating the exchange of commands, data, and status updates.
+- **Real-time Control:** It enables you to control your robot in real time through the intuitive Neutron web interface, making it easy to send commands and receive feedback on the fly.
+- **Data Collection:** The agent gathers essential data from your robot's sensors, allowing you to monitor its performance, health, and environment.
+- **Job Execution:** It empowers your robot to execute complex tasks and routines autonomously based on commands from the Neutron platform.
+
+#### Installation Steps ⚙️
+
+1. **Download the Agent:**
+
+   - Download the agent by [visiting the Github page](https://github.com/neutron-robotics/neutron-agent) and following the instructions
+
+2. **Install the agent:**
+
+   - Open a terminal or command prompt on your robot's operating system.
+   - Execute the install script for the agent
+     ```bash
+     cd neutron-agent
+     python3 src/agent.py --install
+     ```
+
+3. **Configuration:**
+
+   - During the installation process, you'll be prompted to specify the location where you want to store the agent's configuration files. The default location is usually `~/.neutron-agent`
+
+4. **Verification:**
+
+   - After installation, run the following command to ensure the agent is installed correctly and accessible:
+     ```bash
+     neutron-agent --version
+     ```
+   - You should see the installed version number of the agent.
+
+5. **Linking to Neutron:**
+   - To link your robot to the Neutron platform, use the following command:
+   ```bash
+   neutron-agent --link
+   ```
+   - You'll be asked to enter a unique linking key found in the robot's menu on the Neutron web interface.
+
+![Hello](/screenshot/new-robot-link.png)
+
+**Congratulations!** You've successfully installed the Neutron Agent and linked your robot to the platform. You're now ready to dive into the exciting world of robot control and automation!

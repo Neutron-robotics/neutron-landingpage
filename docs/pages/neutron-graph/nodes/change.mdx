@@ -1,0 +1,48 @@
+import Image from 'next/image'
+
+## Change Node
+
+<Image src="/screenshot/node-change.png" alt="Change Node UI" width={200} height={200} />
+
+**Type:** Function
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Change Node allows you to modify the payload of a message flowing through your graph. You can define rules to set, remove, or move properties within the message payload. Multiple rules can be applied in sequence, offering flexibility in transforming your data.
+
+**Settings Parameters:**
+
+The change node uses a set of **rules**
+Each rule consists of the following parameters:
+
+*   **Mode:**
+    *   **Set:** Defines or overrides a property with a new value.
+    *   **Remove:** Deletes a property from the payload.
+    *   **Move:** Moves a property to a new location, removing it from the original.
+*   **Property:** The name of the property to modify (e.g., `msg.payload.x`). You can use dot notation to access nested properties.
+*   **Value (Set Mode Only):** The new value to assign to the property.
+*   **New Property (Move Mode Only):** The new location for the property.
+
+**Input:**
+
+*   `msg`: The message object whose payload you want to modify.
+
+**Output:**
+
+*   `msg`: The modified message object with the changes applied.
+
+**Example Usage:**
+
+1.  **Add a Rule:** Click the "+" button to add a rule.
+2.  **Select Mode:** Choose "Set," "Remove," or "Move" based on your desired modification.
+3.  **Specify Property:** Enter the property name you want to change.
+4.  **Set Value/New Property:** Depending on the mode, enter the new value or the new property name.
+5.  **Add More Rules:** Repeat the process to define multiple rules that will be executed in order.
+
+**Tips:**
+
+*   Rules are processed sequentially from top to bottom.
+*   You can reorder rules by dragging and dropping them in the list.
+*   Use the Debug Node to inspect the message payload before and after the Change Node to verify the modifications.

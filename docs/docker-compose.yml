@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  neutron-documentation:
+    build:
+      context: .
+    container_name: neutron-documentation
+    image: registry.hugosoft.dev/hugosoft/neutron-documentation:latest
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_NEUTRON_APPLICATION=https://neutron-robotics.com
+      - NEXT_PUBLIC_NEUTRON_API=https://api.neutron-robotics.com
+    ports:
+      - "22301:4000"

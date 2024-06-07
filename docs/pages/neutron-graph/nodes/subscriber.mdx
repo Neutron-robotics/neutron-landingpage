@@ -1,0 +1,25 @@
+import Image from 'next/image'
+
+## Subscriber Node (ROS2)
+
+<Image src="/screenshot/node-subscriber.png" alt="Subscriber Node UI" width={200} height={200} />
+
+**Type:** ROS2
+
+**Compatible with:** Flow Graph, Connector Graph
+
+**Description:**
+
+The Subscriber Node allows your robot to listen for messages on a specific ROS2 topic. It acts as a receiver of information, capturing data published by other nodes on the designated topic. This node is essential for receiving sensor data, commands, or other types of information within your ROS2-based robot system.
+
+**Settings Parameters:**
+
+*   **Topic:** Specify the name of the ROS2 topic you want to subscribe to (e.g., `/scan`).
+
+**Input:**
+
+*   (None) The Subscriber Node does not have any explicit input connections. It receives messages directly from the ROS2 topic.
+
+**Output:**
+
+*   `msg`: The message object received from the ROS2 topic. The structure of this object will depend on the topic's message type.
