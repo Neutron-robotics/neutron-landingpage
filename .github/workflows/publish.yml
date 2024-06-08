@@ -1,0 +1,90 @@
+name: Build and publish neutron documentation and landing page
+
+on:
+  release:
+    types: [created]
+
+env:
+  REGISTRY: registry.hugosoft.dev/
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  buildDocs:
+    runs-on: ubuntu-latest
+    name: Build Docs using Node v18
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: "https://npm.pkg.github.com"
+      - run: |
+          cd ./docs
+          npm install
+          npm run build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publishDocs:
+    needs: [buildDocs]
+    runs-on: ubuntu-latest
+    name: Publish Docs image to Hugosoft cloud
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Log in to Hugosoft Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./docs
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}hugosoft/neutron-docs:latest
+            ${{ env.REGISTRY }}hugosoft/neutron-docs:${{ github.event.release.tag_name }}
+          build-args: |
+            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+
+  buildLandingPage:
+    runs-on: ubuntu-latest
+    name: Build Landing Page using Node v18
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: "https://npm.pkg.github.com"
+      - run: |
+          cd ./home
+          npm install
+          npm run build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publishLandingPage:
+    needs: [buildLandingPage]
+    runs-on: ubuntu-latest
+    name: Publish Landing Page image to Hugosoft cloud
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Log in to Hugosoft Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./home
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}hugosoft/neutron-landingpage:latest
+            ${{ env.REGISTRY }}hugosoft/neutron-landingpage:${{ github.event.release.tag_name }}
+          build-args: |
+            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
