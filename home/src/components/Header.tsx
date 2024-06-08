@@ -75,7 +75,7 @@ const Header = (props: HeaderProps) => {
         <header className={styles.header}>
           <nav className={styles.nav}>
             <div className={styles.logo}>
-              <a className={`${styles.in_animation} ${styles.in_animation}`} ref={el => (itemRefs as any).current[0] = el} href={process.env.NEXT_PUBLIC_NEUTRON_APPLICATION}>
+              <a className={`${styles.in_animation} ${styles.in_animation}`} ref={el => (itemRefs as any).current[0] = el} href={process.env.NEXT_PUBLIC_NEUTRON_WEB}>
                 <Image src={NeutronLogo} alt="logo" width={205} height={35} />
               </a>
             </div>
