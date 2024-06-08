@@ -24,7 +24,6 @@ interface HomeProps {
 // eslint-disable-next-line react/display-name
 const Homepage = forwardRef((props: HomeProps, ref: any) => {
     const [initParticles, setInitParticles] = useState(false);
-    console.log([props])
     const t = useTranslations('Index');
     const {
         homeRef

@@ -75,7 +75,7 @@ const Header = (props: HeaderProps) => {
         <header className={styles.header}>
           <nav className={styles.nav}>
             <div className={styles.logo}>
-              <a className={`${styles.in_animation} ${styles.in_animation}`} ref={el => (itemRefs as any).current[0] = el} href="https://neutron-robotics.com/">
+              <a className={`${styles.in_animation} ${styles.in_animation}`} ref={el => (itemRefs as any).current[0] = el} href={process.env.NEXT_PUBLIC_NEUTRON_APPLICATION}>
                 <Image src={NeutronLogo} alt="logo" width={205} height={35} />
               </a>
             </div>
@@ -83,11 +83,11 @@ const Header = (props: HeaderProps) => {
               <ol>
                 <li ref={el => (itemRefs as any).current[1] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#home">{t('home')}</a></li>
                 <li ref={el => (itemRefs as any).current[2] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#innovation">{t('service')}</a></li>
-                <li ref={el => (itemRefs as any).current[3] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="https://docs.neutron-robotics.com/">{t('documentation')}</a></li>
-                <li ref={el => (itemRefs as any).current[4] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#blog">{t('blog')}</a></li>
-                <li ref={el => (itemRefs as any).current[5] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#contact">{t('contact')}</a></li>
-                <li ref={el => (itemRefs as any).current[6] = el} className={`${styles.in_animation}`}>
-                  <a className={`${styles.button} button`} href="#access">
+                <li ref={el => (itemRefs as any).current[3] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href={process.env.NEXT_PUBLIC_NEUTRON_DOCS}>{t('documentation')}</a></li>
+                {/* <li ref={el => (itemRefs as any).current[4] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#blog">{t('blog')}</a></li> */}
+                <li ref={el => (itemRefs as any).current[4] = el} className={`${styles.in_animation}`}><a className={styles.not_button} href="#contact">{t('contact')}</a></li>
+                <li ref={el => (itemRefs as any).current[5] = el} className={`${styles.in_animation}`}>
+                  <a className={`${styles.button} button`} href={process.env.NEXT_PUBLIC_NEUTRON_APPLICATION}>
                     <p>{t('access')}</p>
                     <svg className={styles.button_arrow} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.69 17.39"><g>
                       <path className={styles.path_1} d="M8.9 12.4 L8.9 12.4" />

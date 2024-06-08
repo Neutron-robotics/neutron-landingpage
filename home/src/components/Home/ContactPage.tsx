@@ -17,10 +17,11 @@ const ContactPage = () => {
     const handleSubmit = async () => {
         if (!formFeedback.current) return;
 
-        const isEmail = (str: string): boolean => /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(str);
+        const isEmail = (str: string): boolean => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(str);
 
         if (!form.email?.length || !isEmail(form.email ?? '')) {
             setIsEmailError(true);
+            console.log("not email", form.email)
             return;
         } else setIsEmailError(false);
 

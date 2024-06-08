@@ -60,7 +60,7 @@ const Footer = () => {
                         <div>
                             <a className={styles.not_button} href="#home">{t('nav.home')}</a>
                             <a className={styles.not_button} href="#innovation">{t('nav.service')}</a>
-                            <a className={styles.not_button} href="https://docs.neutron-robotics.com/">{t('nav.documentation')}</a>
+                            <a className={styles.not_button} href={process.env.NEXT_PUBLIC_NEUTRON_DOCS}>{t('nav.documentation')}</a>
                             <a className={styles.not_button} href="#blog">{t('nav.blog')}</a>
                         </div>
                     </div>

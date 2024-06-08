@@ -9,7 +9,5 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_NEUTRON_APPLICATION=https://neutron-robotics.com
-      - NEXT_PUBLIC_NEUTRON_API=https://api.neutron-robotics.com
     ports:
-      - "22301:4000"
+      - "22301:3000"
