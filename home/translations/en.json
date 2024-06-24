@@ -7,6 +7,14 @@
     "contact": "Contact Us",
     "access": "Access Application"
   },
+  "Menu": {
+    "home": "Home",
+    "service": "Service",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "contact": "Contact Us",
+    "access": "Access Application"
+  },
   "Index": {
     "title": "The platform empowering Robotics",
     "intro": "Integrate your robotic solution into a platform that will bring it to the next level.",

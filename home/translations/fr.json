@@ -7,6 +7,14 @@
     "contact": "Contactez-nous",
     "access": "Accéder à l'application"
   },
+  "Menu": {
+    "home": "Accueil",
+    "service": "Service",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "contact": "Contactez-nous",
+    "access": "Accéder à l'application"
+  },
   "Index": {
     "title": "Donnez vie à vos robots ",
     "intro": "Faites passer votre solution robotique au niveau supérieur en la connectant à notre plateforme intelligente et évolutive",
