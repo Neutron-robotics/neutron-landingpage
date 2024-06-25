@@ -21,9 +21,9 @@ export const subscribeContactForm = async (
 export const subscribeNewsletter = async (
     email: string
   ): Promise<void> => {
-    const res = await api.post(`contact/newsletter`, {email});
     console.log(process.env)
-  console.log(process.env.NEXT_PUBLIC_NEUTRON_API)
+    console.log(process.env.NEXT_PUBLIC_NEUTRON_API)
+    const res = await api.post(`contact/newsletter`, {email});
     if (res.status !== 200) {
       throw new Error("Failed to subscribe to newsletter!");
     }
