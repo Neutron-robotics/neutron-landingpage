@@ -60,6 +60,7 @@ USER nextjs
 
 EXPOSE 3000
 
+ENV NEXT_PUBLIC_NEUTRON_API "https://api.neutron-robotics.com"
 ENV PORT 3000
 
 # server.js is created by next build from the standalone output
