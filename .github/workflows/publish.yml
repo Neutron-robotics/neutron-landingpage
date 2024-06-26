@@ -88,4 +88,3 @@ jobs:
             ${{ env.REGISTRY }}hugosoft/neutron-landingpage:${{ github.event.release.tag_name }}
           build-args: |
             GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-            NEXT_PUBLIC_NEUTRON_API=https://api.neutron-robotics.com
