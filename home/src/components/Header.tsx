@@ -17,8 +17,6 @@ const Header = (props: HeaderProps) => {
   const { homeRef } = props;
   const itemRefs = useRef<HTMLElement[]>([]);
 
-  console.log("env:", process.env)
-
   const [headerDetached, setHeaderDetached] = useState(false);
   const lastScrollTop = useRef(1);
   const [displayHeaderMenu, setDisplayHeaderMenu] = useState(true);

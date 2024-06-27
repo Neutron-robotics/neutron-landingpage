@@ -6,7 +6,7 @@ import FrLogo from "../../../public/fr.png"
 import UsLogo from "../../../public/us.png"
 import XLogo from "../../../public/x-icon.svg"
 import Image from "next/image";
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { subscribeNewsletter } from '@/api/website'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
@@ -14,14 +14,18 @@ import Link from 'next/link'
 const Footer = () => {
     const t = useTranslations('Footer');
     const [email, setEmail] = useState('');
+    const newsletterFeedback = useRef<HTMLSpanElement>(null);
 
     async function handleSubscribeClick(): Promise<void> {
+        if (!newsletterFeedback.current) return;
+
         try {
             await subscribeNewsletter(email);
-            window.location.href = window.location.pathname + '#home';
-            window.location.reload();
+            newsletterFeedback.current.textContent = t('newsletterSuccessFeedback');
+            newsletterFeedback.current.className = `${styles.newsletter_feedback} ${styles.success}`;
         } catch (err: any) {
-            console.log('newsletter api error', err);
+            newsletterFeedback.current.textContent = t('newsletterErrorFeedback');
+            newsletterFeedback.current.className = `${styles.newsletter_feedback} error`;
         }
     }
 
@@ -42,6 +46,7 @@ const Footer = () => {
                         <a onClick={handleSubscribeClick} className={`${styles.button} button`}>
                             <p>{t('subscribeButton')}</p>
                         </a>
+                        <span className={styles.newsletter_feedback} ref={newsletterFeedback} />
                     </div>
                     <div className={styles.footer_brand}>
                         <Image src={NeutronLogo} alt="logo" width={205} height={35} />

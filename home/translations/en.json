@@ -74,6 +74,8 @@
     "subscribeTitle": "Subscribe To Our Newsletter For Latest Update",
     "emailPlaceholder": "Enter your email",
     "subscribeButton": "Subscribe Now",
+    "newsletterSuccessFeedback": "You'll heard from us soon !",
+    "newsletterErrorFeedback": "An error has occured, please try again later",
     "nav": {
       "home": "Home",
       "service": "Service",

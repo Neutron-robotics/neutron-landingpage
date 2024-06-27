@@ -21,7 +21,6 @@ const ContactPage = () => {
 
         if (!form.email?.length || !isEmail(form.email ?? '')) {
             setIsEmailError(true);
-            console.log("not email", form.email)
             return;
         } else setIsEmailError(false);
 
@@ -45,7 +44,6 @@ const ContactPage = () => {
             formFeedback.current.textContent = t('feedback.success');
             formFeedback.current.className = 'success';
         } catch (err: any) {
-            console.log('Form error', err);
             formFeedback.current.textContent = err.message;
             formFeedback.current.className = 'error';
         }
